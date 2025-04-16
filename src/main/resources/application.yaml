@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: khayal
+  cache:
+    type: simple
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/java_bank_accounts?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1122
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+client:
+  url:
+    cbar: https://cbar.az/currencies/%s.xml
