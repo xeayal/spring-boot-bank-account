@@ -53,9 +53,9 @@ public class AccountService {
             return amount;
         }
 
-        if ("AZN".equals(fromCurrency) && "USD".equals(toCurrency)) {
+        if (fromCurrency.equals("AZN") && toCurrency.equals("USD")) {
             return amount / rate;
-        } else if ("USD".equals(fromCurrency) && "AZN".equals(toCurrency)) {
+        } else if (fromCurrency.equals("USD") && toCurrency.equals("AZN")) {
             return amount * rate;
         } else {
             throw new UnsupportedOperationException("Unsupported currency conversion: " + fromCurrency + " to " + toCurrency);
